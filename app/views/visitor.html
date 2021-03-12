@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Login
+  Visitor details
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,52 +12,70 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Is this you?</h1>
+      <h1 class="govuk-heading-xl">Visitor details</h1>
 
-      <h2 class="govuk-heading-m">Personal details</h2>
+      <p>You must:</p>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Name
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Sarah Philips
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> name</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="govuk-summary-list__value">
-            5 January 1978
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
-
-
-      <h2 class="govuk-heading-m">Now select the prisoner</h2>
-
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>show ID that matches these details</li>
+        <li>be on the prisoner's contact list</li>
+        <li>not be banned from visiting the prisoner</li>
+      </ul>
 
       <form action="/prisoner" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Accept and send
-        </button>
+        {{ govukInput({
+          label: {
+            text: "First name"
+          },
+          id: "event-name",
+          name: "event-name"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Last name"
+          },
+          id: "event-name",
+          name: "event-name"
+        }) }}
+
+        {{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "When was your passport issued?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "You must be over 18 to book a visit"
+  }
+}) }}
+
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "event-name",
+          name: "event-name",
+  hint: {
+    text: "We'll send an email confirmation to this address"
+  }
+        }) }}
+
+        {{ govukButton({
+          text: "Add visitor",
+          classes: "govuk-button--secondary"
+        }) }}
+
+        {{ govukButton({
+  text: "Save and continue"
+}) }}
 
       </form>
     </div>

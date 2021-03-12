@@ -12,8 +12,6 @@
         {% if serviceName %} {{ serviceName }} {% endif %}
       </h1>
 
-      {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
-
       <p>Freda Smith</p>
 
 {{ govukSummaryList({
@@ -71,6 +69,12 @@
     }
   ]
 }) }}
+
+
+      <form class="form" action="/visitor" method="post">
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+      </form>
 
     </div>
 
