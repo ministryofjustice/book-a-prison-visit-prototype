@@ -11,24 +11,46 @@
 
       <h1 class="govuk-heading-xl">Return visitors</h1>
 
-      <p>Sign in to check progress on a claim or apply without entering.../<p>
+      <p>Sign in to check your booking without entering all your information again.</p>
+
+      <p>If you are visiting a different prisoner you'll need to <a href="/">book another visit</a>.</p>
 
       <form class="form" action="/visitor" method="post">
 
         {{ govukInput({
           label: {
-            text: "Reference number"
+            text: "Booking reference number"
           },
           id: "event-name",
-          name: "event-name"
+          name: "event-name",
+          hint: {
+            text: "For example, P1BOOK3D1"
+          }
         }) }}
 
         {{ govukDetails({
-            summaryText: "Where to find o",
-            text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
-            }) }}
+          summaryText: "Where to find your booking reference number",
+          html: "<ol class=\"govuk-list govuk-list--bullet\"><li>Check your emails from Book a Prison Visit</li></ol>"
+        }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Sign in</button>
+        {{ govukDateInput({
+          id: "passport-issued",
+          namePrefix: "passport-issued",
+          fieldset: {
+            legend: {
+              text: "Your date of birth",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "For example, 12 11 2007"
+          }
+        }) }}
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
 
         <p><a href="/">Forgotten your password?</a></p>
 

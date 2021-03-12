@@ -15,15 +15,16 @@
 
         {{ govukInput({
           label: {
-            text: "What is your email address?"
+            text: "Your email"
           },
+          classes: "govuk-input--width-10",
           id: "event-name",
           name: "event-name"
         }) }}
 
         {{ govukInput({
           label: {
-            text: "What is your password?"
+            text: "Your password"
           },
           classes: "govuk-input--width-10",
           id: "event-name",
@@ -31,7 +32,9 @@
           type: "password"
         }) }}
 
-        <button class="govuk-button" data-module="govuk-button">Sign in</button>
+        {{ govukButton({
+          text: "Sign in"
+        }) }}
 
         <p><a href="/">Forgotten your password?</a></p>
 

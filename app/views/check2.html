@@ -8,205 +8,167 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-xl">Check your requested booking details</h1>
-
-      <h2 class="govuk-heading-l">Visitor details</h2>
+      <h1 class="govuk-heading-xl">Please check your booking details</h1>
 
         {{ govukSummaryList({
-        rows: [
-            {
-                key: {
-                    text: "Name"
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Name"
+                    },
+                    value: {
+                        text: "Freda Smith"
+                    },
+                    actions: {}
                 },
-                value: {
-                    text: "Sarah Philips"
-                },
-                actions: {}
-            },
-            {
-                key: {
-                    text: "Date of birth"
-                },
-                value: {
-                    text: "5 January 1978"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+                {
+                    key: {
+                        text: "Accompanied by"
+                    },
+                    value: {
+                        text: "Sandra Smith (12 years old)"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
                 }
-            },
-            {
-                key: {
-                    text: "Home address"
-                },
-                value: {
-                    html: "72 Guild street<br>London<br>SE23 6FH"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
-                    }
-                    ]
-                }
-            },
-            {
-                key: {
-                    text: "Contact details"
-                },
-                value: {
-                    html: "071234 123123<br>jsomewhere@example.com"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
-                    }
-                    ]
-                }
-            }
-        ]
+            ]
         }) }}
-
-      <h2 class="govuk-heading-l">Additional visitor details</h2>
-
         {{ govukSummaryList({
-        rows: [
-            {
-                key: {
-                    text: "Name"
-                },
-                value: {
-                    text: "John Philips"
-                },
-                actions: {}
-            },
-            {
-                key: {
-                    text: "Date of birth"
-                },
-                value: {
-                    text: "1 January 1980"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Prisoner"
+                    },
+                    value: {
+                        text: "Fred Smith"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
-                }
-            },
-            {
-                key: {
-                    text: "Home address"
                 },
-                value: {
-                    html: "72 Guild street<br>London<br>SE23 6FH"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+                {
+                    key: {
+                        text: "Prison"
+                    },
+                    value: {
+                        text: "HMP Broadmoor"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
                 }
-            },
-            {
-                key: {
-                    text: "Contact details"
-                },
-                value: {
-                    html: "071234 456456<br>jsomewhere2@example.com"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
-                    }
-                    ]
-                }
-            }
-        ]
+            ]
         }) }}
-
-      <h2 class="govuk-heading-l">Additional requirements</h2>
-
         {{ govukSummaryList({
-        rows: [
-            {
-                key: {
-                    text: "Prison"
-                },
-                value: {
-                    text: "Broadmoor"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Date"
+                    },
+                    value: {
+                        text: "20 November 2022"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
-                }
-            },
-            {
-                key: {
-                    text: "Name of Prisoner"
                 },
-                value: {
-                    text: "Patrick Bateman"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+                {
+                    key: {
+                        text: "Time"
+                    },
+                    value: {
+                        text: "12:00pm"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
                 }
-            },
-            {
-                key: {
-                    text: "Date and time of visit"
-                },
-                value: {
-                    text: "5 April 2021, 9:30am"
-                },
-                actions: {
-                    items: [
-                    {
-                        href: "#",
-                        text: "Change",
-                        visuallyHiddenText: "name"
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Accessibility requirements"
+                    },
+                    value: {
+                        text: "You require wheelchair access."
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
                     }
-                    ]
                 }
-            }
-        ]
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Other requirements"
+                    },
+                    value: {
+                        text: "You wish to apply for financial help for travel costs"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
         }) }}
 
-
-      <h2 class="govuk-heading-l">Now send your application</h2>
-      <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
       <form class="form" action="/visitor" method="post">
-        <button class="govuk-button" data-module="govuk-button">Accept and send application</button>
+
+    {{ govukButton({
+        text: "Confirm booking"
+    }) }}
 
       </form>
 
