@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+
+{% block pageTitle %}
+  Who do you want to visit?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+{{ govukCheckboxes({
+  idPrefix: "waste",
+  name: "waste",
+  fieldset: {
+    legend: {
+      text: "Do you or any of the other visitors need any reasonable adjustments for the visit?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Select all that apply."
+  },
+  items: [
+    {
+      value: "carcasses",
+      text: "None"
+    },
+    {
+      value: "mines",
+      text: "Wheelchair access ramp",
+      checked: true
+    },
+    {
+      value: "farm",
+      text: "Portable induction loop for people with hearing aids"
+    },
+    {
+      value: "farm",
+      text: "British Sign Language (BSL) interpreter"
+    },
+    {
+      value: "farm",
+      text: "Other",
+      checked: true
+    }
+  ]
+}) }}
+
+
+{{ govukTextarea({
+  name: "more-detail",
+  id: "more-detail",
+  label: {
+    text: "Can you provide more detail?",
+    classes: "govuk-label--s",
+    isPageHeading: false
+  },
+  hint: {
+    text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+  }
+}) }}
+
+      <form class="form" action="/ffwhen" method="post">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
