@@ -22,14 +22,32 @@ $govuk-assets-path: '/govuk/assets/';
         font-weight: normal;
     }
 }
+.bapv-month-nav {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        flex: 1;
+        font-weight: bold;
+    }
+    div:nth-child(2) {
+        text-align: center;
+    }
+    div:last-child {
+        text-align: right;
+    }
+}
 .bapv-table {
     width: 100%;
-    margin: govuk-spacing(4) 0;
+    margin: 0;
     @include govuk-font($size: 19);
 
     td, th {
         text-align: center;
         padding: govuk-spacing(4);
+    }
+    th {
+        padding-top: 0;
     }
     td {
         color: govuk-colour("mid-grey");
