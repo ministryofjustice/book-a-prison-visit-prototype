@@ -1,4 +1,4 @@
-{% extends "layout_moj.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Change caseload
@@ -19,7 +19,7 @@
 
       <h1 class="govuk-heading-xl">Change case load</h1>
 
-      <form class="form" action="/cnvsdpshome" method="post">
+      <form class="form" action="dpshome" method="post">
 
         {{ govukSelect({
   id: "sort",

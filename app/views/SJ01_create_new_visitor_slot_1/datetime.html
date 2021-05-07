@@ -1,4 +1,4 @@
-{% extends "layout_moj.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Date and time for new visit slot
@@ -19,7 +19,7 @@
 
 <h1 class="govuk-heading-l">Date and time for new visit slot</h1>
 
-      <form class="form" action="/cnvscheck" method="post">
+      <form class="form" action="check" method="post">
 
 {{ govukDateInput({
   id: "passport-issued",

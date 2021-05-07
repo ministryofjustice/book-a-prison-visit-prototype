@@ -1,4 +1,4 @@
-{% extends "layout_moj_signedout.html" %}
+{% extends "../layout_moj_signedout.html" %}
 
 {% block pageTitle %}
   Sign in
@@ -11,7 +11,7 @@
 
       <h1 class="govuk-heading-xl">Sign in</h1>
 
-      <form class="form" action="/cnvschangecaseload" method="post">
+      <form class="form" action="changecaseload" method="post">
 
         {{ govukInput({
           label: {

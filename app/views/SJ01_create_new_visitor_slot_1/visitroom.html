@@ -1,4 +1,4 @@
-{% extends "layout_moj.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Choose the visit room
@@ -18,7 +18,7 @@
 }) }}
 
 
-      <form class="form" action="/cnvsdatetime" method="post">
+      <form class="form" action="datetime" method="post">
 {{ govukRadios({
   idPrefix: "changed-name",
   name: "changed-name",

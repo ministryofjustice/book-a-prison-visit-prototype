@@ -1,4 +1,4 @@
-{% extends "layout_moj.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Change caseload
@@ -18,7 +18,7 @@
 }) }}
 
 
-      <form class="form" action="/cnvstypevisit" method="post">
+      <form class="form" action="typevisit" method="post">
 {{ govukRadios({
   idPrefix: "changed-name",
   name: "changed-name",

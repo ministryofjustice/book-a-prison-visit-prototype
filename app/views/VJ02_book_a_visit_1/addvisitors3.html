@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "../layout.html" %}
 
 {% block pageTitle %}
   Add visitors
@@ -13,7 +13,7 @@
 
       <p>You can add up to 3 adults and 3 children (under 18) to your visit.</p>
 
-      <form class="form" action="/ffvisitors3" method="post">
+      <form class="form" action="addvisitors3" method="post">
 
         {{ govukInput({
           label: {
@@ -127,13 +127,13 @@
 <div class="govuk-button-group">
         {{ govukButton({
           text: "Continue",
-          href: "/ffadjustments"
+          href: "adjustments"
         }) }}
 
         {{ govukButton({
             text: "Add another visitor",
             classes: "govuk-button--secondary",
-          href: "/ffaddvisitors3"
+          href: "addvisitors3"
         }) }}
         </div>
 

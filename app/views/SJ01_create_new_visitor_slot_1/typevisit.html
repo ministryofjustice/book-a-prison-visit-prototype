@@ -1,4 +1,4 @@
-{% extends "layout_moj.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Choose the type of visit
@@ -18,7 +18,7 @@
 }) }}
 
 
-      <form class="form" action="/cnvsvisitroom" method="post">
+      <form class="form" action="visitroom" method="post">
 {{ govukRadios({
   idPrefix: "changed-name",
   name: "changed-name",
