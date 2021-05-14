@@ -43,13 +43,15 @@
     {
       value: "farm",
       text: "Other",
-      checked: true
+      conditional: {
+        html: "<div class='govuk-form-group'><label class='govuk-label govuk-label--s' for='more-detail'>Can you provide more detail?</label><div id='more-detail-hint' class='govuk-hint'>Do not include personal or financial information, like your National Insurance number or credit card details.</div><textarea class='govuk-textarea' id='more-detail' name='more-detail' rows='5' aria-describedby='more-detail-hint'></textarea></div>"
+      }
     }
   ]
 }) }}
 
 
-      <form class="form" action="adjustments2" method="post">
+      <form class="form" action="when" method="post">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
