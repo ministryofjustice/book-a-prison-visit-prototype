@@ -1,4 +1,4 @@
-{% extends "../layout_moj_signedout.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Search for the visitor
@@ -13,7 +13,7 @@
 
       <form class="form" action="searchresults" method="post">
 
-<div class="govuk-button-group">
+<div class="horizontal-form" style="padding-bottom: 15px;">
         {{ govukInput({
           label: {
             text: "Enter visitor name"

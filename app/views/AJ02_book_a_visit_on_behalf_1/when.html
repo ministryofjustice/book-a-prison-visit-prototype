@@ -1,4 +1,4 @@
-{% extends "../layout.html" %}
+{% extends "../layout_moj.html" %}
 
 {% block pageTitle %}
   Select date and time of visit?
@@ -47,8 +47,7 @@
       },
       content: {
         html: "<div class='govuk-form-group'><fieldset class='govuk-fieldset' aria-describedby='waste-hint'><div class='govuk-checkboxes'><div class='govuk-checkboxes__item'><input class='govuk-checkboxes__input' id='session' name='session' type='checkbox' value='active'><label class='govuk-label govuk-checkboxes__label' for='session'>Active</label></div><div class='govuk-checkboxes__item'><input class='govuk-checkboxes__input' id='session-2' name='session' type='checkbox' value='inactive'><label class='govuk-label govuk-checkboxes__label' for='session-2'>Inactive</label></div></div></fieldset></div>"
-      },
-      expanded: true
+      }
     }
   ]
 }) }}

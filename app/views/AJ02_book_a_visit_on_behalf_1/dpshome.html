@@ -25,7 +25,7 @@
         <h2 class="govuk-heading-m">Search for a prisoner</h2>
         <p>Leave blank to view all results for selected residential location</p>
       <form class="form" action="changecaseload" method="post">
-<div class="govuk-button-group">
+      <div class="horizontal-form" style="padding-bottom: 15px;">
         {{ govukInput({
             label: {
                 text: "Name or prison number",
@@ -54,8 +54,10 @@
 }) }}
   {{ govukButton({
     text: "Submit"
-  }) }}</form></div>
+  }) }}
     </div>
+    </form>
+</div>
 </div>
 </div>
 </div>
