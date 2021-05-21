@@ -16,6 +16,14 @@ $govuk-assets-path: '/govuk/assets/';
 
 // DPS header
 @import "components/dps-header";
+@import "components/prisoner-alerts";
+@import "components/prisoner-full-image";
+@import "components/prisoner-personal";
+@import "components/prisoner-profile-header";
+@import "components/prisoner-profile";
+@import "components/prisoner-schedule";
+@import "components/prisoner-visits";
+@import "components/horizontal-content";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .bapv-session-hightlight {
