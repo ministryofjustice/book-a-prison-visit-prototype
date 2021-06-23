@@ -12,8 +12,8 @@
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "add-visitors",
+  name: "add-visitors",
   fieldset: {
     legend: {
       text: "Do you want to add visitors?",
@@ -27,11 +27,13 @@
   items: [
     {
       value: "yes",
-      text: "Yes"
+      text: "Yes",
+      checked: checked('add-visitors', "yes")
     },
     {
       value: "no",
-      text: "No"
+      text: "No",
+      checked: checked('add-visitors', "no")
     }
   ]
 }) }}
