@@ -59,16 +59,18 @@
         }) }}
 
 <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Add another visitor",
+            classes: "govuk-button--secondary",
+          href: "addvisitors3"
+        }) }}
+  
         {{ govukButton({
           text: "Continue",
           href: "adjustments"
         }) }}
 
-        {{ govukButton({
-            text: "Add another visitor",
-            classes: "govuk-button--secondary",
-          href: "addvisitors3"
-        }) }}
+        
         </div>
 
       </form>
