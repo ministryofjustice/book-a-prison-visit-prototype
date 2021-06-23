@@ -124,17 +124,18 @@
           id: "event-name",
           name: "event-name"
         }) }}
-<div class="govuk-button-group">
-        {{ govukButton({
-          text: "Continue",
-          href: "adjustments"
-        }) }}
-
-        {{ govukButton({
-            text: "Add another visitor",
-            classes: "govuk-button--secondary",
-          href: "addvisitors3"
-        }) }}
+        <div class="moj-button-action">
+          {{ govukButton({
+            text: 'Add another person',
+            classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+          }) }}
+        </div>
+    
+        <div class="moj-button-action">
+          {{ govukButton({
+            text: 'Continue',
+            href: "adjustments"
+          }) }}
         </div>
 
       </form>
