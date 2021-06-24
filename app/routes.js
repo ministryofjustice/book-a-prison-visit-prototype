@@ -13,7 +13,7 @@ router.post('/add-visitors-answer', function (req, res) {
    // Send user to next page
    res.redirect('/VJ02_book_a_visit_2/addvisitors2')
  } else {
-   // Send user to ineligible page
+   // Send user to adjustments page
    res.redirect('/VJ02_book_a_visit_2/adjustments')
  }
 
