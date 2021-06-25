@@ -10,6 +10,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
+      <form class="form" action="/add-visitors-answer" method="post">
 
 {{ govukRadios({
   classes: "govuk-radios--inline",
@@ -28,19 +29,16 @@
   items: [
     {
       value: "yes",
-      text: "Yes",
-      checked: checked("add-visitors", "yes")
+      text: "Yes"
     },
     {
       value: "no",
-      text: "No",
-      checked: checked("add-visitors", "no")
+      text: "No"
     }
   ]
 }) }}
 
 
-      <form class="form" action="addvisitors2" method="post">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
         
       </form>

@@ -10,10 +10,11 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <form class="form" action="/add-visitors-answer" method="post">
 {{ govukRadios({
-  classes: "govuk-radios--inline",
-  idPrefix: "changed-name",
-  name: "changed-name",
+  idPrefix: "add-visitors",
+  classes: "add-visitors",
+  name: "add-visitors",
   fieldset: {
     legend: {
       text: "Do you want to add visitors?",
@@ -37,7 +38,6 @@
 }) }}
 
 
-      <form class="form" action="addvisitors2" method="post">
         <button class="govuk-button" data-module="govuk-button">Continue</button>
         
       </form>
