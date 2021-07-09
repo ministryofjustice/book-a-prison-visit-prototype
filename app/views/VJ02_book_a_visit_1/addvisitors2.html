@@ -13,50 +13,43 @@
 
       <p>You can add another 2 adults and 3 children (under 18) to your visit.</p>
 
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h3 class="govuk-fieldset__heading">
+              Saved visitors
+            </h3>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Select all accompanying visitors.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                John Smith
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Luke Jones
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Lily Adams
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
       <form class="form" action="visitors3" method="post">
 
-        {{ govukInput({
-          label: {
-            text: "First name",
-            classes: "govuk-label--s"
-          },
-          id: "event-name",
-          name: "event-name"
-        }) }}
-
-        {{ govukInput({
-          label: {
-            text: "Last name",
-            classes: "govuk-label--s"
-          },
-          id: "event-name",
-          name: "event-name"
-        }) }}
-
-        {{ govukDateInput({
-  id: "passport-issued",
-  namePrefix: "passport-issued",
-  fieldset: {
-    legend: {
-      text: "Date of birth",
-      isPageHeading: false,
-      classes: "govuk-fieldset__legend--s"
-    }
-  },
-  hint: {
-    text: "For example, 31 3 1980"
-  }
-}) }}
-
-        {{ govukInput({
-          label: {
-            text: "Post code",
-            classes: "govuk-label--s"
-          },
-          classes: "govuk-input--width-10",
-          id: "event-name",
-          name: "event-name"
-        }) }}
+        
 
           {{ govukButton({
             text: "Add another visitor",
