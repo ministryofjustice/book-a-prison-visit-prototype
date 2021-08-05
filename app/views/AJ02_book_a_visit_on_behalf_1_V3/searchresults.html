@@ -16,7 +16,7 @@
 <div class="horizontal-form" style="padding-bottom: 15px;">
         {{ govukInput({
           label: {
-            text: "Enter prisoner name or number"
+            text: "Enter prisoner name or prison number"
           },
           classes: "govuk-input govuk-!-width-full",
           id: "event-name",
@@ -93,10 +93,13 @@
       text: "Name"
     },
     {
+      text: "Establishment"
+    },
+    {
       text: "Date of birth"
     },
     {
-      text: "Prisoner number"
+      text: "Prison number"
     }
   ],
   rows: [
@@ -105,15 +108,21 @@
         html: '<a href="prisonerprofilereduced">Aarell, Dublosek</a>'
       },
       {
+        text: "HMP Wayland"
+      },
+      {
         text: "1 January 1970"
       },
       {
-        text: "VH8475D"
+        text: " VH8475D"
       }
     ],
     [
       {
-        html: '<a href="#">Aaron, Dubon</a>'
+        html: '<a href="#">Aaloon, Dubon</a>'
+      },
+      {
+        text: "HMP Wayland"
       },
       {
         text: "3 March 2000"
@@ -125,6 +134,9 @@
     [
       {
         html: '<a href="#">Avel, Dibrisk</a>'
+      },
+      {
+        text: "HMP Wayland"
       },
       {
         text: "7 May 1977"
