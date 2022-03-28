@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your booking
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Freda Smith</p>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "You have chosen to visit Fred Smith in HMP Broadmoor on 20th November 2022 at 12:00."
+      },
+      value: {
+        text: ""
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "You require wheelchair access."
+      },
+      value: {
+        text: ""
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    },
+    {
+      key: {
+        text: "Sandra Smith (12yrs old) is accompanying you on the visit."
+      },
+      value: {
+        text: ""
+      },
+      actions: {
+        items: [
+          {
+            href: "#",
+            text: "Change",
+            visuallyHiddenText: "name"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+
+      <form class="form" action="/visitor" method="post">
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

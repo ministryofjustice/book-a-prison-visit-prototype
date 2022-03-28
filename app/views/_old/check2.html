@@ -1,0 +1,178 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your booking
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Please check your booking details</h1>
+
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Name"
+                    },
+                    value: {
+                        text: "Freda Smith"
+                    },
+                    actions: {}
+                },
+                {
+                    key: {
+                        text: "Accompanied by"
+                    },
+                    value: {
+                        text: "Sandra Smith (12 years old)"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Prisoner"
+                    },
+                    value: {
+                        text: "Fred Smith"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                },
+                {
+                    key: {
+                        text: "Prison"
+                    },
+                    value: {
+                        text: "HMP Broadmoor"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Date"
+                    },
+                    value: {
+                        text: "20 November 2022"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                },
+                {
+                    key: {
+                        text: "Time"
+                    },
+                    value: {
+                        text: "12:00pm"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Accessibility requirements"
+                    },
+                    value: {
+                        text: "You require wheelchair access."
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
+        }) }}
+        {{ govukSummaryList({
+            classes: 'govuk-summary-list--no-border',
+            rows: [
+                {
+                    key: {
+                        text: "Other requirements"
+                    },
+                    value: {
+                        text: "You wish to apply for financial help for travel costs"
+                    },
+                    actions: {
+                        items: [
+                        {
+                            href: "#",
+                            text: "Change",
+                            visuallyHiddenText: "name"
+                        }
+                        ]
+                    }
+                }
+            ]
+        }) }}
+
+      <form class="form" action="/visitor" method="post">
+
+    {{ govukButton({
+        text: "Confirm booking"
+    }) }}
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}

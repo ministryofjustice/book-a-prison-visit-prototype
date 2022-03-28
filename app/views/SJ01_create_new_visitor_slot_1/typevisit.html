@@ -1,0 +1,60 @@
+{% extends "../layout_moj.html" %}
+
+{% block pageTitle %}
+  Choose the type of visit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div style="box-shadow: inset 0 -1px 0 0 #b1b4b6;">
+            <p class="govuk-!-padding-bottom-2"><strong>Wayland (HMP)</strong> <a href="#">Change location</a></p>
+        </div>
+
+        {{ govukBackLink({
+  text: "Back",
+  href: "#"
+}) }}
+
+
+      <form class="form" action="visitroom" method="post">
+{{ govukRadios({
+  idPrefix: "changed-name",
+  name: "changed-name",
+  fieldset: {
+    legend: {
+      text: "Choose the type of visit",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Some hint text or other."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Open"
+    },
+    {
+      value: "no",
+      text: "Closed"
+    },
+    {
+      value: "no2",
+      text: "Legal"
+    }
+  ]
+}) }}
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
